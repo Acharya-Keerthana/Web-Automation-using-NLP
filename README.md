@@ -22,6 +22,15 @@ An intelligent automation testing framework that uses AI to convert natural lang
 8. **Form Validation**: Test empty form validation
 9. **Car Details**: Check specific car type details
 
+## 🧪 Testing the Automation
+Running Automated Tests
+The framework includes comprehensive Playwright tests in test_car_rental.py that validate all automation functionalities.
+### Basic Test Execution
+Run all tests in headed mode:
+```bash
+pytest --headed
+```
+
 ## 🛠️ Installation
 
 ### Prerequisites
