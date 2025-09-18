@@ -1,4 +1,4 @@
-# Car Rental Automation Testing
+# Car Rental Automation Testing Using NLP
 
 An intelligent automation testing framework that uses AI to convert natural language commands into automated browser actions for testing a car rental website. The system combines Ollama AI model with Playwright for seamless test automation.
 
