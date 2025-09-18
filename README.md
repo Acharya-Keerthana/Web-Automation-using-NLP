@@ -2,7 +2,7 @@
 
 An intelligent automation testing framework that uses AI to convert natural language commands into automated browser actions for testing a car rental website. The system combines Ollama AI model with Playwright for seamless test automation.
 
-## 🚀 Features
+## Features
 
 - **Natural Language Processing**: Convert plain English commands into structured test actions
 - **AI-Powered Parsing**: Uses Ollama's TinyLlama model to understand user intent
@@ -10,7 +10,7 @@ An intelligent automation testing framework that uses AI to convert natural lang
 - **Comprehensive Car Rental Testing**: Supports all major car rental website functionalities
 - **Error Handling**: Robust error handling with visual feedback
 
-## 📋 Supported Actions
+##  Supported Actions
 
 1. **Car Search**: Search for specific car models
 2. **Booking Form**: Fill out rental booking forms with custom data
@@ -22,7 +22,7 @@ An intelligent automation testing framework that uses AI to convert natural lang
 8. **Form Validation**: Test empty form validation
 9. **Car Details**: Check specific car type details
 
-## 🧪 Testing the Automation
+##  Testing the Automation
 Running Automated Tests
 The framework includes comprehensive Playwright tests in test_car_rental.py that validate all automation functionalities.
 ### Basic Test Execution
@@ -31,7 +31,7 @@ Run all tests in headed mode:
 pytest --headed
 ```
 
-## 🛠️ Installation
+##  Installation
 
 ### Prerequisites
 
@@ -63,7 +63,7 @@ python testollama.py
 
 This will verify that Ollama is running correctly and the TinyLlama model is accessible.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── entry.py              # Console-based entry point
@@ -75,7 +75,7 @@ This will verify that Ollama is running correctly and the TinyLlama model is acc
 └── testollama.py          # Ollama connection test script
 ```
 
-## 🚀 Usage
+##  Usage
 
 ### Pre-flight Check
 
@@ -163,7 +163,7 @@ The booking form accepts the following fields:
 - **VAN**: Large passenger van
 - **Luxury**: Premium luxury vehicles
 
-## 📸 Screenshot Capture
+##  Screenshot Capture
 
 The system automatically captures screenshots at key moments:
 
@@ -174,7 +174,7 @@ The system automatically captures screenshots at key moments:
 
 Screenshots are processed and resized for optimal viewing.
 
-## 🔍 How It Works
+##  How It Works
 
 1. **User Input**: Natural language command entered via console
 2. **AI Processing**: Ollama processes the command using system prompts
@@ -182,7 +182,7 @@ Screenshots are processed and resized for optimal viewing.
 4. **Action Execution**: Playwright performs the browser automation
 5. **Screenshot Capture**: Visual evidence is captured throughout the process
 
-## 📊 JSON Action Format
+##  JSON Action Format
 
 The AI converts natural language to structured JSON:
 
@@ -208,7 +208,7 @@ The AI converts natural language to structured JSON:
 }
 ```
 
-## 🌐 Target Website
+##  Target Website
 
 **Car Rental Website Repository**: `https://github.com/Acharya-Keerthana/automationdemo`
 
@@ -223,18 +223,19 @@ This car rental website includes:
 
 The automation framework is designed to work with this specific car rental website structure.
 
-## 🔄 Workflow
+##  Workflow
 
-```mermaid
-graph TD
-    A[User Input] --> B[Ollama AI Processing]
-    B --> C[JSON Response]
-    C --> D[Parser Analysis]
-    D --> E[Action Selection]
-    E --> F[Playwright Execution]
-    F --> G[Screenshot Capture]
-    G --> H[Result Display]
-```
+User Input: Natural language command entered via console or GUI
+
+AI Processing: Ollama processes the command using system prompts
+
+JSON Parsing (MCP Role): parser.py extracts and validates structured instructions from the AI output.
+
+The parser acts like a lightweight MCP (Model Context Protocol) bridge, ensuring only well-formed JSON actions (e.g., search_car, fill_booking_form) are passed to Playwright.
+
+Action Execution: Playwright performs the browser automation
+
+Screenshot Capture: Visual evidence is captured throughout the process
 
 
 
