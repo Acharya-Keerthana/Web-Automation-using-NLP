@@ -229,9 +229,9 @@ User Input: Natural language command entered via console or GUI
 
 AI Processing: Ollama processes the command using system prompts
 
-JSON Parsing (MCP Role): parser.py extracts and validates structured instructions from the AI output.
+JSON Parsing: parser.py extracts and validates structured instructions from the AI output.
 
-The parser acts like a lightweight MCP (Model Context Protocol) bridge, ensuring only well-formed JSON actions (e.g., search_car, fill_booking_form) are passed to Playwright.
+The parser acts like a bridge, ensuring only well-formed JSON actions (e.g., search_car, fill_booking_form) are passed to Playwright.
 
 Action Execution: Playwright performs the browser automation
 
