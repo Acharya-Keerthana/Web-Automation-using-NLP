@@ -60,7 +60,7 @@ class CarRentalAutomationGUI:
         
     def create_natural_language_tab(self, notebook):
         frame = ttk.Frame(notebook)
-        notebook.add(frame, text="🤖 Natural Language")
+        notebook.add(frame, text=" Natural Language")
         
         # Title
         title_label = ttk.Label(frame, text="Car Rental Automation - Natural Language Interface", 
@@ -101,11 +101,11 @@ class CarRentalAutomationGUI:
         btn_frame = ttk.Frame(input_frame)
         btn_frame.pack(fill=tk.X, pady=5)
         
-        self.execute_btn = ttk.Button(btn_frame, text="🚀 Execute Command", 
+        self.execute_btn = ttk.Button(btn_frame, text=" Execute Command", 
                                      command=self.execute_natural_command, style='Accent.TButton')
         self.execute_btn.pack(side=tk.LEFT, padx=5)
         
-        self.clear_btn = ttk.Button(btn_frame, text="🗑️ Clear", command=self.clear_natural_input)
+        self.clear_btn = ttk.Button(btn_frame, text=" Clear", command=self.clear_natural_input)
         self.clear_btn.pack(side=tk.LEFT, padx=5)
         
         # Progress bar
@@ -125,7 +125,7 @@ class CarRentalAutomationGUI:
         
     def create_quick_actions_tab(self, notebook):
         frame = ttk.Frame(notebook)
-        notebook.add(frame, text="⚡ Quick Actions")
+        notebook.add(frame, text=" Quick Actions")
         
         # Title
         title_label = ttk.Label(frame, text="Quick Actions - One-Click Automation", 
@@ -138,22 +138,22 @@ class CarRentalAutomationGUI:
         
         # Define quick actions
         quick_actions = [
-            ("🔍 Search BMW", {"action": "search_car", "query": "BMW"}),
-            ("🔍 Search Mercedes", {"action": "search_car", "query": "Mercedes"}),
-            ("🏠 Go to Home", {"action": "navigate_to_section", "section": "#home"}),
-            ("🚗 Go to Cars", {"action": "navigate_to_section", "section": "#cars"}),
-            ("📋 Go to Booking", {"action": "navigate_to_section", "section": "#booking"}),
-            ("💰 Go to Pricing", {"action": "navigate_to_section", "section": "#price"}),
-            ("📞 Test Contact", {"action": "test_contact_links"}),
-            ("💰 Check SUV Price", {"action": "check_pricing", "car_type": "SUV"}),
-            ("💰 Check VAN Price", {"action": "check_pricing", "car_type": "VAN"}),
-            ("💰 Check Luxury Price", {"action": "check_pricing", "car_type": "Luxury"}),
-            ("🚗 SUV Details", {"action": "check_car_details", "car_type": "SUV"}),
-            ("🚐 VAN Details", {"action": "check_car_details", "car_type": "VAN"}),
-            ("🏎️ Luxury Details", {"action": "check_car_details", "car_type": "Luxury"}),
-            ("📝 Submit Booking", {"action": "submit_booking"}),
-            ("🔄 Reset Form", {"action": "reset_form"}),
-            ("✅ Validate Empty Form", {"action": "validate_empty_form"})
+            (" Search BMW", {"action": "search_car", "query": "BMW"}),
+            (" Search Mercedes", {"action": "search_car", "query": "Mercedes"}),
+            (" Go to Home", {"action": "navigate_to_section", "section": "#home"}),
+            (" Go to Cars", {"action": "navigate_to_section", "section": "#cars"}),
+            (" Go to Booking", {"action": "navigate_to_section", "section": "#booking"}),
+            (" Go to Pricing", {"action": "navigate_to_section", "section": "#price"}),
+            (" Test Contact", {"action": "test_contact_links"}),
+            (" Check SUV Price", {"action": "check_pricing", "car_type": "SUV"}),
+            (" Check VAN Price", {"action": "check_pricing", "car_type": "VAN"}),
+            (" Check Luxury Price", {"action": "check_pricing", "car_type": "Luxury"}),
+            (" SUV Details", {"action": "check_car_details", "car_type": "SUV"}),
+            (" VAN Details", {"action": "check_car_details", "car_type": "VAN"}),
+            (" Luxury Details", {"action": "check_car_details", "car_type": "Luxury"}),
+            (" Submit Booking", {"action": "submit_booking"}),
+            (" Reset Form", {"action": "reset_form"}),
+            (" Validate Empty Form", {"action": "validate_empty_form"})
         ]
         
         # Create buttons in grid
@@ -171,7 +171,7 @@ class CarRentalAutomationGUI:
             
     def create_form_builder_tab(self, notebook):
         frame = ttk.Frame(notebook)
-        notebook.add(frame, text="📝 Form Builder")
+        notebook.add(frame, text=" Form Builder")
         
         # Title
         title_label = ttk.Label(frame, text="Booking Form Builder", 
@@ -225,16 +225,16 @@ class CarRentalAutomationGUI:
         btn_frame = ttk.Frame(form_frame)
         btn_frame.grid(row=7, column=0, columnspan=2, pady=15)
         
-        ttk.Button(btn_frame, text="📝 Fill Form Only", 
+        ttk.Button(btn_frame, text=" Fill Form Only", 
                   command=self.fill_booking_form).pack(side=tk.LEFT, padx=5)
-        ttk.Button(btn_frame, text="📝➡️📤 Fill & Submit", 
+        ttk.Button(btn_frame, text=" Fill & Submit", 
                   command=self.fill_and_submit_form).pack(side=tk.LEFT, padx=5)
-        ttk.Button(btn_frame, text="🔄 Reset Fields", 
+        ttk.Button(btn_frame, text=" Reset Fields", 
                   command=self.reset_form_fields).pack(side=tk.LEFT, padx=5)
         
     def create_results_tab(self, notebook):
         frame = ttk.Frame(notebook)
-        notebook.add(frame, text="📊 Results")
+        notebook.add(frame, text=" Results")
         
         # Title
         title_label = ttk.Label(frame, text="Execution Results & Screenshots", 
@@ -260,9 +260,9 @@ class CarRentalAutomationGUI:
         screenshot_controls = ttk.Frame(right_frame)
         screenshot_controls.pack(fill=tk.X, pady=(0, 10))
         
-        ttk.Button(screenshot_controls, text="💾 Save Screenshot", 
+        ttk.Button(screenshot_controls, text=" Save Screenshot", 
                   command=self.save_screenshot).pack(side=tk.LEFT, padx=5)
-        ttk.Button(screenshot_controls, text="🗑️ Clear Results", 
+        ttk.Button(screenshot_controls, text=" Clear Results", 
                   command=self.clear_results).pack(side=tk.LEFT, padx=5)
         
         # Screenshot display
@@ -274,7 +274,7 @@ class CarRentalAutomationGUI:
         
     def create_history_tab(self, notebook):
         frame = ttk.Frame(notebook)
-        notebook.add(frame, text="📚 History")
+        notebook.add(frame, text=" History")
         
         # Title
         title_label = ttk.Label(frame, text="Test Execution History", 
@@ -304,9 +304,9 @@ class CarRentalAutomationGUI:
         history_controls = ttk.Frame(frame)
         history_controls.pack(fill=tk.X, padx=10, pady=5)
         
-        ttk.Button(history_controls, text="🗑️ Clear History", 
+        ttk.Button(history_controls, text=" Clear History", 
                   command=self.clear_history).pack(side=tk.LEFT, padx=5)
-        ttk.Button(history_controls, text="💾 Export History", 
+        ttk.Button(history_controls, text=" Export History", 
                   command=self.export_history).pack(side=tk.LEFT, padx=5)
         
         # Initialize history list
@@ -322,7 +322,7 @@ class CarRentalAutomationGUI:
             return
             
         self.start_execution()
-        self.log_output(f"🤖 Processing command: {command}")
+        self.log_output(f" Processing command: {command}")
         
         # Run in separate thread
         thread = threading.Thread(target=self.run_automation, args=(command, "natural"))
