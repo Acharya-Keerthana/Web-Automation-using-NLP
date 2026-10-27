@@ -361,7 +361,7 @@ class CarRentalAutomationGUI:
             return
             
         self.start_execution()
-        self.log_output("📝➡️📤 Filling form and submitting...")
+        self.log_output("Filling form and submitting...")
         
         # Run both actions in sequence
         thread = threading.Thread(target=self.run_form_sequence, args=(form_data,))
