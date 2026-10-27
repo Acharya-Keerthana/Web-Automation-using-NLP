@@ -337,7 +337,7 @@ class CarRentalAutomationGUI:
             return
             
         self.start_execution()
-        self.log_output(f"⚡ Executing quick action: {action}")
+        self.log_output(f" Executing quick action: {action}")
         
         # Run in separate thread
         thread = threading.Thread(target=self.run_automation_direct, args=(action, "quick"))
@@ -474,12 +474,12 @@ class CarRentalAutomationGUI:
                 command = result[4] if len(result) > 4 else "Unknown"
                 action = result[5] if len(result) > 5 else {}
                 
-                self.log_output(f"✅ SUCCESS: {message}")
+                self.log_output(f"SUCCESS: {message}")
                 self.display_screenshot(screenshot)
                 self.add_to_history(command, action.get('action', 'Unknown'), "Success", message)
                 
             else:
-                self.log_output(f"❌ ERROR: {message}")
+                self.log_output(f" ERROR: {message}")
                 self.add_to_history("Error", "Error", "Failed", message)
                 
             self.finish_execution()
